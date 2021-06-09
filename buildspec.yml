@@ -7,7 +7,7 @@ phases:
     commands:
       - echo Installing httpd server
       - yum install -y httpd
-      - service httpd start
+      #- service httpd start
   build:
     commands:
       - echo Build started on `date`
