@@ -1,0 +1,18 @@
+version: 0.2
+phases:
+  install:
+    commands:
+      - echo Getting Started
+  pre_build:
+    commands:
+      - echo Installing httpd server
+      - yum install -y httpd
+      - service httpd start
+  build:
+    commands:
+      - echo Build started on `date`
+      - grep -Fq "Congratulations" /index.html
+  post_build:
+    commands:
+      - service httpd status
+      - echo Build completed on `date`
