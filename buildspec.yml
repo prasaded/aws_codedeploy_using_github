@@ -8,7 +8,7 @@ phases:
       - echo Installing httpd server
       #- yum install -y httpd
       - chmod +x ./build_scripts/create_configuration.sh
-      - sh ./build_scripts/create_configuration.sh
+      - sh build_scripts/create_configuration.sh
       #- service httpd start
   build:
     commands:
